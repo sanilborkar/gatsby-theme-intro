@@ -3,6 +3,7 @@ module.exports = ({ actions }) => {
     type WorkHistoryYaml implements Node {
       id: ID!
       company: String!
+      location: String
       period: String
       position: String
       url: String

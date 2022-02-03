@@ -9,7 +9,7 @@ const WorkHistory = ({ history }) => {
         Work history
       </h5>
       <div className="history flex flex-col relative pt-6 pb-6">
-        {history.map(({ company, period, position, url }, i) => (
+        {history.map(({ company, location, period, position, url }, i) => (
           <div
             className="history-entry relative w-1/2 py-4"
             key={`${company}_${i}`}
@@ -35,6 +35,10 @@ const WorkHistory = ({ history }) => {
             {position && (
               <h5 className="text-sm font-normal mb-1">{position}</h5>
             )}
+            {location && (
+              <span className="text-sm font-medium opacity-50">{location}</span>
+            )}
+            <br />
             {period && (
               <span className="text-sm font-medium opacity-50">{period}</span>
             )}
