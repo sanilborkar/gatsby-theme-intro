@@ -11,16 +11,21 @@ const Summary = ({ profile }) => (
       <h3 className="font-header font-light text-2xl text-front leading-tight">
         {profile.company}
       </h3>
-      {profile.for_hire && (
+      {profile.for_hire === "hire" ? (
         <div className="font-header font-semibold text-xs uppercase pt-2">
           <span className="inline-block w-2 h-2 rounded-full mr-1 bg-green-500"></span>
           Available for hire
+        </div>
+      ) : (
+        <div className="font-header font-semibold text-xs uppercase pt-2">
+          <span className="inline-block w-2 h-2 rounded-full mr-1 bg-gray-500"></span>
+          Not looking for new opportunities
         </div>
       )}
     </div>
     <div className="w-1/2 pl-4 lg:pl-12">
       <h5 className="font-header font-semibold text-front text-sm uppercase">
-        Focused on
+        Currently learning
       </h5>
       <div className="font-header font-light text-2xl text-front leading-tight">
         {profile.focus}
