@@ -1,5 +1,6 @@
 import React from "react"
 import About from "../about/about"
+import Awards from "../awards/awards"
 import ContactForm from "../contact-form/contact-form"
 import Projects from "../projects/projects"
 import Skills from "../skills/skills"
@@ -7,7 +8,13 @@ import Summary from "../summary/summary"
 import Tools from "../tools/tools"
 import WorkHistory from "../work-history/work-history"
 
-const MainContent = ({ formspreeEndpoint, history, projects, profile }) => {
+const MainContent = ({
+  formspreeEndpoint,
+  history,
+  projects,
+  awards,
+  profile,
+}) => {
   return (
     <main className="lg:w-2/3 lg:pl-8 xl:pl-12">
       <Summary profile={profile} />
@@ -24,6 +31,7 @@ const MainContent = ({ formspreeEndpoint, history, projects, profile }) => {
       {profile.about && <About about={profile.about} />}
       <WorkHistory history={history} />
       <Projects projects={projects} />
+      <Awards awards={awards} />
       {/* <ContactForm
         formspreeEndpoint={formspreeEndpoint}
         budget={profile.budget}

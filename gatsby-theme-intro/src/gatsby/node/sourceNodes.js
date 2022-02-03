@@ -19,5 +19,13 @@ module.exports = ({ actions }) => {
       tags: [String]
       url: String
     }
+
+    type AwardsYaml implements Node {
+      id: ID!
+      description: String
+      name: String!
+      company: String
+      tags: [String]
+    }
   `)
 }

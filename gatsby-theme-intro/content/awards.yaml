@@ -1,0 +1,14 @@
+- name: Best UI/UX Design
+  description: Developed a walkthough tutorial using Intro.js.
+  tags:
+    - JavaScript
+    - ReactJS
+  company: First Company
+
+- name: Hackathon Gold Medalist
+  description: Developed a scrabble game with 2 players.
+  tags:
+    - Lua
+    - ReactJS
+    - NodeJS
+  company: Second Company

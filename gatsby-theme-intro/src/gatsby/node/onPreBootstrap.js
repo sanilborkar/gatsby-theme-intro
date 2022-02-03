@@ -13,6 +13,7 @@ module.exports = ({ reporter }, options) => {
     fs.mkdirSync(`${contentPath}images`)
 
     const filesToCopy = [
+      "awards.yaml",
       "profile.yaml",
       "projects.yaml",
       "social.yaml",
