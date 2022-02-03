@@ -3,6 +3,7 @@ import About from "../about/about"
 import Awards from "../awards/awards"
 import ContactForm from "../contact-form/contact-form"
 import Projects from "../projects/projects"
+import Publications from "../publications/publications"
 import Skills from "../skills/skills"
 import Summary from "../summary/summary"
 import Tools from "../tools/tools"
@@ -13,6 +14,7 @@ const MainContent = ({
   history,
   projects,
   awards,
+  publications,
   profile,
 }) => {
   return (
@@ -32,6 +34,7 @@ const MainContent = ({
       <WorkHistory history={history} />
       <Projects projects={projects} />
       <Awards awards={awards} />
+      <Publications publications={publications} />
       {/* <ContactForm
         formspreeEndpoint={formspreeEndpoint}
         budget={profile.budget}

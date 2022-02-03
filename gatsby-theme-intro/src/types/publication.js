@@ -1,18 +1,20 @@
 import { graphql } from "gatsby"
 import { arrayOf, string } from "prop-types"
 
-export const AwardType = {
+export const PublicationType = {
   description: string,
   name: string.isRequired,
-  company: string,
+  conference: string.isRequired,
+  location: string.isRequired,
   tags: arrayOf(string),
 }
 
 export const query = graphql`
-  fragment AwardFragment on AwardsYaml {
+  fragment PublicationFragment on PublicationsYaml {
     description
     name
-    company
+    conference
+    location
     tags
   }
 `

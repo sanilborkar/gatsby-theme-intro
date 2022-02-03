@@ -1,0 +1,15 @@
+- name: New Approach to Modeling
+  description: Developed a simplistic model to predict the stock market prices.
+  tags:
+    - Python
+    - MLLib
+  conference: International Conference of Machine Learning
+  location: London, UK
+
+- name: Line Follower Robot - A New Innovation
+  description: Built a line follower robot.
+  tags:
+    - Robotics
+    - AI
+  conference: International Conference of AI & Robotics
+  location: New York, NY, US

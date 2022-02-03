@@ -27,5 +27,14 @@ module.exports = ({ actions }) => {
       company: String
       tags: [String]
     }
+
+    type PublicationsYaml implements Node {
+      id: ID!
+      description: String
+      name: String!
+      conference: String
+      location: String
+      tags: [String]
+    }
   `)
 }

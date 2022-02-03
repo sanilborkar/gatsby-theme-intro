@@ -1,6 +1,7 @@
 export { arrayOf, shape, string } from "prop-types"
+export { AwardType } from "./award"
 export { ProfileType } from "./profile"
 export { ProjectType } from "./project"
-export { AwardType } from "./award"
+export { PublicationType } from "./publication"
 export { SocialType } from "./social"
 export { WorkHistoryType } from "./work-history"
