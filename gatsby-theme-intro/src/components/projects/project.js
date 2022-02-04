@@ -7,7 +7,7 @@ import ProjectTags from "./project-tags"
 import Modal from "./project-modal"
 
 const Project = (props) => {
-  const { name, image, url, description, status, tags, icon } = props
+  const { name, image, url, abstract, description, status, tags, icon } = props
   const modalRef1 = useRef()
 
   return (
@@ -32,15 +32,20 @@ const Project = (props) => {
             {url}
           </a>
         )}
-        <p className="w-full py-4 whitespace-pre-line">{description}</p>
-        <p>
-          <button className="btn" onClick={() => modalRef1.current.openModal()}>
-            <span className="text-sm font-medium opacity-80">More...</span>
-          </button>
-          <Modal ref={modalRef1}>
-            <p className="w-full py-4 whitespace-pre-line">{description}</p>
-          </Modal>
-        </p>
+        <p className="w-full py-4 whitespace-pre-line">{abstract}</p>
+        {description && (
+          <p>
+            <button
+              className="btn"
+              onClick={() => modalRef1.current.openModal()}
+            >
+              <span className="text-sm font-medium opacity-80">More...</span>
+            </button>
+            <Modal ref={modalRef1}>
+              <p className="w-full py-4 whitespace-pre-line">{description}</p>
+            </Modal>
+          </p>
+        )}
         <ul className="pr-2">
           {status && <ProjectStatus status={status} />}
           {tags && <ProjectTags tags={tags} />}

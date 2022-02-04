@@ -11,6 +11,7 @@ module.exports = ({ actions }) => {
 
     type ProjectsYaml implements Node {
       id: ID!
+      abstract: String
       description: String
       icon: String
       image: File @fileByRelativePath
