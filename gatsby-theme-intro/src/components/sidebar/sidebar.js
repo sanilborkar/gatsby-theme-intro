@@ -1,4 +1,5 @@
 import React from "react"
+import SectionTitle from "../section-title/section-title"
 import Location from "./location"
 import ProfileImage from "./profile-image"
 import { arrayOf, shape, ProfileType, SocialType } from "../../types"
@@ -11,9 +12,9 @@ const Sidebar = ({ profile, social }) => (
         <h2 className="font-header font-light text-front text-2xl leading-none mb-4">
           {profile.profession}
         </h2>
-        <h1 className="font-header font-black text-front text-4xl leading-none break-words mb-6">
+        <h2 className="font-header font-black text-front text-4xl leading-none break-words mb-6">
           {profile.name}
-        </h1>
+        </h2>
         {profile.image && (
           <ProfileImage image={profile.image} name={profile.name} />
         )}
@@ -27,9 +28,7 @@ const Sidebar = ({ profile, social }) => (
         <br />
         <div className="pt-8 pb-12 lg:py-0">
           <br />
-          <h5 className="font-header font-semibold text-front text-sm uppercase mb-3">
-            Connect
-          </h5>
+          <SectionTitle title="Connect" />
           <SocialLinks social={social} />
         </div>
       </div>

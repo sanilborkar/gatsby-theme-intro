@@ -1,13 +1,13 @@
 import React from "react"
 import { arrayOf, shape, WorkHistoryType } from "../../types"
+import SectionTitle from "../section-title/section-title"
 import "./work-history.css"
 
 const WorkHistory = ({ history }) => {
   return (
     <>
-      <h5 className="font-header font-semibold text-front text-sm uppercase mt-12 mb-3 text-center">
-        Work history
-      </h5>
+      <SectionTitle title="Work history" textalign="text-center" />
+
       <div className="history flex flex-col relative pt-6 pb-6">
         {history.map(({ company, location, period, position, url }, i) => (
           <div

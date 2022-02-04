@@ -1,12 +1,12 @@
 import React from "react"
+import SectionTitle from "../section-title/section-title"
 import Project from "./project"
 import { arrayOf, shape, ProjectType } from "../../types"
 
 const Projects = ({ projects }) => (
   <>
-    <h5 className="font-header font-semibold text-front text-sm uppercase mb-3">
-      Projects
-    </h5>
+    <SectionTitle title="Projects" />
+
     {projects.map((project, i) => (
       <Project key={`${project.name}_${i}`} {...project} />
     ))}

@@ -1,13 +1,12 @@
 import React from "react"
 import { FaCompass } from "react-icons/fa"
 import { shape, ProfileType } from "../../types"
+import SectionTitle from "../section-title/section-title"
 
 const Summary = ({ profile }) => (
   <div className="flex pb-8">
     <div className="w-1/2 pr-4 lg:pr-12 border-r border-line">
-      <h5 className="font-header font-semibold text-front text-sm uppercase">
-        Company
-      </h5>
+      <SectionTitle title="Company" />
       <h3 className="font-header font-light text-2xl text-front leading-tight">
         {profile.company}
       </h3>
@@ -24,9 +23,7 @@ const Summary = ({ profile }) => (
       )}
     </div>
     <div className="w-1/2 pl-4 lg:pl-12">
-      <h5 className="font-header font-semibold text-front text-sm uppercase">
-        Currently learning
-      </h5>
+      <SectionTitle title="Currently learning" />
       <div className="font-header font-light text-2xl text-front leading-tight">
         {profile.focus}
         {profile.focus_url && (
