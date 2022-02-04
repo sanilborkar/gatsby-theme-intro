@@ -2,7 +2,6 @@ import React from "react"
 import { arrayOf, shape, AwardType } from "../../types"
 import Award from "./award"
 import * as styles from "../../styles/awards.module.css"
-import "../../styles/global.css"
 import SectionTitle from "../section-title/section-title"
 
 const Awards = ({ awards }) => (
