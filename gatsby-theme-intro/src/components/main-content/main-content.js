@@ -34,9 +34,9 @@ const MainContent = ({
 
       {profile.about && <About about={profile.about} />}
       <WorkHistory history={history} />
-      <Projects projects={projects} />
-      <Awards awards={awards} />
-      <Publications publications={publications} />
+      {projects.length > 0 && <Projects projects={projects} />}
+      {awards.length > 0 && <Awards awards={awards} />}
+      {publications.length > 0 && <Publications publications={publications} />}
       {patents.length > 0 && <Patents patents={patents} />}
       {/* <ContactForm
         formspreeEndpoint={formspreeEndpoint}
