@@ -14,6 +14,7 @@ module.exports = ({ reporter }, options) => {
 
     const filesToCopy = [
       "awards.yaml",
+      "patents.yaml",
       "profile.yaml",
       "projects.yaml",
       "publications.yaml",

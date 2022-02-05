@@ -16,6 +16,7 @@ const IndexPage = ({ data }) => {
     projects,
     awards,
     publications,
+    patents,
     site,
     social,
   } = data
@@ -37,6 +38,7 @@ const IndexPage = ({ data }) => {
           projects={projects.nodes}
           awards={awards.nodes}
           publications={publications.nodes}
+          patents={patents.nodes}
           formspreeEndpoint={site.siteMetadata.formspreeEndpoint}
         />
       </div>
@@ -59,6 +61,16 @@ export const query = graphql`
         formspreeEndpoint
       }
     }
+    awards: allAwardsYaml {
+      nodes {
+        ...AwardFragment
+      }
+    }
+    patents: allPatentsYaml {
+      nodes {
+        ...PatentFragment
+      }
+    }
     profile: profileYaml {
       ...ProfileFragment
     }
@@ -75,11 +87,6 @@ export const query = graphql`
     projects: allProjectsYaml {
       nodes {
         ...ProjectFragment
-      }
-    }
-    awards: allAwardsYaml {
-      nodes {
-        ...AwardFragment
       }
     }
     publications: allPublicationsYaml {

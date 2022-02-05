@@ -37,5 +37,15 @@ module.exports = ({ actions }) => {
       location: String
       tags: [String]
     }
+
+    type PatentsYaml implements Node {
+      id: ID!
+      name: String!
+      abstract: String
+      description: String
+      status: String
+      tags: [String]
+      link: String
+    }
   `)
 }

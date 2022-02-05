@@ -2,6 +2,7 @@ import React from "react"
 import About from "../about/about"
 import Awards from "../awards/awards"
 import ContactForm from "../contact-form/contact-form"
+import Patents from "../patents/patents"
 import Projects from "../projects/projects"
 import Publications from "../publications/publications"
 import Skills from "../skills/skills"
@@ -15,6 +16,7 @@ const MainContent = ({
   projects,
   awards,
   publications,
+  patents,
   profile,
 }) => {
   return (
@@ -35,6 +37,7 @@ const MainContent = ({
       <Projects projects={projects} />
       <Awards awards={awards} />
       <Publications publications={publications} />
+      {patents.length > 0 && <Patents patents={patents} />}
       {/* <ContactForm
         formspreeEndpoint={formspreeEndpoint}
         budget={profile.budget}
