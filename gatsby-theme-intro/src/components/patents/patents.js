@@ -4,7 +4,7 @@ import Patent from "./patent"
 import SectionTitle from "../section-title/section-title"
 
 const Patents = ({ patents }) => (
-  <>
+  <section id="patents">
     <SectionTitle title={"Patents"} />
 
     <div>
@@ -12,7 +12,7 @@ const Patents = ({ patents }) => (
         <Patent key={`${patent.name}_${i}`} {...patent} />
       ))}
     </div>
-  </>
+  </section>
 )
 
 Patents.propTypes = {

@@ -5,7 +5,7 @@ import * as styles from "../../styles/awards.module.css"
 import SectionTitle from "../section-title/section-title"
 
 const Awards = ({ awards }) => (
-  <>
+  <section id="awards">
     <SectionTitle title={"Awards & Achievements"} />
 
     <div className={styles.awards}>
@@ -13,7 +13,7 @@ const Awards = ({ awards }) => (
         <Award key={`${award.name}_${i}`} {...award} />
       ))}
     </div>
-  </>
+  </section>
 )
 
 Awards.propTypes = {

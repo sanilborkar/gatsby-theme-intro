@@ -10,3 +10,6 @@ site/content
 
 # VSCode Files
 .vscode
+
+# Other Files
+.DS_Store

@@ -5,7 +5,7 @@ import { arrayOf, shape, ProjectType } from "../../types"
 import * as styles from "../../styles/projects.module.css"
 
 const Projects = ({ projects }) => (
-  <>
+  <section id="projects">
     <SectionTitle title="Projects" />
 
     <div className={styles.projects}>
@@ -13,7 +13,7 @@ const Projects = ({ projects }) => (
         <Project key={`${project.name}_${i}`} {...project} />
       ))}
     </div>
-  </>
+  </section>
 )
 
 Projects.propTypes = {

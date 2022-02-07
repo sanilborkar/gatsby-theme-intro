@@ -4,13 +4,13 @@ import SectionTitle from "../section-title/section-title"
 import Publication from "./publication"
 
 const Publications = ({ publications }) => (
-  <>
+  <section id="publications">
     <SectionTitle title="Publications" />
 
     {publications.map((publication, i) => (
       <Publication key={`${publication.name}_${i}`} {...publication} />
     ))}
-  </>
+  </section>
 )
 
 Publications.propTypes = {

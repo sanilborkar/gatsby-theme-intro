@@ -5,7 +5,7 @@ import "./work-history.css"
 
 const WorkHistory = ({ history }) => {
   return (
-    <>
+    <section id="work">
       <SectionTitle title="Work history" textalign="text-center" />
 
       <div className="history flex flex-col relative pt-6 pb-6">
@@ -45,7 +45,7 @@ const WorkHistory = ({ history }) => {
           </div>
         ))}
       </div>
-    </>
+    </section>
   )
 }
 
