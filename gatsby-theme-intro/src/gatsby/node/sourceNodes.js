@@ -9,6 +9,15 @@ module.exports = ({ actions }) => {
       url: String
     }
 
+    type EducationsYaml implements Node {
+      id: ID!
+      name: String
+      school: String
+      location: String
+      timeline: String
+      gpa: String
+    }
+
     type ProjectsYaml implements Node {
       id: ID!
       abstract: String

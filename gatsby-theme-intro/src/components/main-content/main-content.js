@@ -2,6 +2,7 @@ import React from "react"
 import About from "../about/about"
 import Awards from "../awards/awards"
 import ContactForm from "../contact-form/contact-form"
+import Educations from "../education/educations"
 import Patents from "../patents/patents"
 import Projects from "../projects/projects"
 import Publications from "../publications/publications"
@@ -13,6 +14,7 @@ import WorkHistory from "../work-history/work-history"
 const MainContent = ({
   formspreeEndpoint,
   history,
+  educations,
   projects,
   awards,
   publications,
@@ -34,6 +36,7 @@ const MainContent = ({
 
       {profile.about && <About about={profile.about} />}
       <WorkHistory history={history} />
+      {educations.length > 0 && <Educations educations={educations} />}
       {projects.length > 0 && <Projects projects={projects} />}
       {awards.length > 0 && <Awards awards={awards} />}
       {publications.length > 0 && <Publications publications={publications} />}

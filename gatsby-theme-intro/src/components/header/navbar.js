@@ -3,6 +3,7 @@ import NavLink from "./navlink"
 
 const NavBar = ({
   isWork,
+  isEducation,
   isProjects,
   isAwards,
   isPublications,
@@ -28,6 +29,7 @@ const NavBar = ({
         <div class="text-sm lg:flex-grow">
           <NavLink label="About" link="about" />
           {isWork && <NavLink label="Experience" link="work" />}
+          {isEducation && <NavLink label="Education" link="education" />}
           {isProjects && <NavLink label="Projects" link="projects" />}
           {isAwards && <NavLink label="Awards" link="awards" />}
           {isPublications && (

@@ -6,6 +6,7 @@ import { ProfileType } from "../../types"
 const Header = ({
   initials,
   isWork,
+  isEducation,
   isProjects,
   isAwards,
   isPublications,
@@ -17,6 +18,7 @@ const Header = ({
     </span>
     <NavBar
       isWork={isWork}
+      isEducation={isEducation}
       isProjects={isProjects}
       isAwards={isAwards}
       isPublications={isPublications}

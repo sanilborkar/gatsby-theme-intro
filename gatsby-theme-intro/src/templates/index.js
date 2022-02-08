@@ -12,6 +12,7 @@ import "../styles/style.css"
 const IndexPage = ({ data }) => {
   const {
     history,
+    educations,
     profile,
     projects,
     awards,
@@ -30,6 +31,7 @@ const IndexPage = ({ data }) => {
       <Header
         initials={profile.initials}
         isWork={history.nodes.length > 0}
+        isEducation={educations.nodes.length > 0}
         isProjects={projects.nodes.length > 0}
         isAwards={awards.nodes.length > 0}
         isPublications={publications.nodes.length > 0}
@@ -41,6 +43,7 @@ const IndexPage = ({ data }) => {
 
         <MainContent
           history={history.nodes}
+          educations={educations.nodes}
           profile={profile}
           projects={projects.nodes}
           awards={awards.nodes}
@@ -89,6 +92,11 @@ export const query = graphql`
     history: allWorkHistoryYaml {
       nodes {
         ...WorkHistoryFragment
+      }
+    }
+    educations: allEducationsYaml {
+      nodes {
+        ...EducationFragment
       }
     }
     projects: allProjectsYaml {

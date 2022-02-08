@@ -1,0 +1,11 @@
+- name: Master of Science (Computer Science)
+  school: This University
+  location: New York, NY, US
+  timeline: August 2018 - May 2020
+  gpa: 3.5/4
+
+- name: Bachelor of Science (Computer Science)
+  school: That University
+  location: Boston, MA, US
+  timeline: August 2010 - May 2014
+  gpa: 3.75/4
